@@ -1,0 +1,58 @@
+### GET /
+
+GET http://localhost:5000
+
+### POST
+
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username":"saeedtaj00@gmail.com",
+    "password":"12345678"
+}
+
+### Login 
+
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+"username" : "saeedtaj00@gmail.com",
+"password" : "12345678"
+
+}
+
+
+### FETCH ALL todos GET / TODOS (protective)
+GET http://localhost:5000/todos
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY5MjA5MDc0LCJleHAiOjE3NjkyOTU0NzR9.RA0SR2wIUEpaaMwBOvU_HqMgbaCBxMtDHcQ-JOO7iAY
+
+
+### ADD Todo (Protected)
+POST http://localhost:5000/todos
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY5MjA5MDc0LCJleHAiOjE3NjkyOTU0NzR9.RA0SR2wIUEpaaMwBOvU_HqMgbaCBxMtDHcQ-JOO7iAY
+Content-Type: application/json
+
+{
+    "task" : "i have to learn express in this month"
+}
+
+
+### Update a todo PUT / TODOS/:id (protective)
+PUT http://localhost:5000/todos/:id
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY5MjA3NzM2LCJleHAiOjE3NjkyOTQxMzZ9.etIx-P83mrmHq41kEiTRF5eiFYu2T3fUrdoUG5pbodw
+
+### Delete a todo DELETE 
+DELETE http://localhost:5000/todos/:id
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY5MjA2NjcwLCJleHAiOjE3NjkyOTMwNzB9.V8d-fdbaif-WPaPWuConVotvx0fvlSxSc_V8Y8g420E
+
+
+
+
+
+
+
+
+
